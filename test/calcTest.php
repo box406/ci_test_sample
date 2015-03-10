@@ -9,6 +9,9 @@ class CalcTest extends PHPUnit_Framework_TestCase
         $calc = new Calc();
 
         $this->assertEquals(2, $calc->plus(1, 1));
+        $this->assertEquals(false, $calc->plus('', 1));
+        $this->assertEquals(false, $calc->plus(1, ''));
+        $this->assertEquals(false, $calc->plus('', ''));
     }
     
 }
