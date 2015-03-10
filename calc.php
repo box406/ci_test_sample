@@ -8,4 +8,7 @@ class Calc {
     }   
     return $a + $b;
   }
+  public function minus($a, $b) {
+    return $a - $b;
+  }
 }

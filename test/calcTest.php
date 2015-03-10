@@ -4,14 +4,24 @@ require_once(dirname(dirname(__FILE__)) . "/Calc.php");
 
 class CalcTest extends PHPUnit_Framework_TestCase
 {
+    public $calc;
+
+    public function __construct() {
+    
+        $this->calc = new Calc();
+    }
+
     public function testPlus() {
 
-        $calc = new Calc();
 
-        $this->assertEquals(2, $calc->plus(1, 1));
-        $this->assertEquals(false, $calc->plus('', 1));
-        $this->assertEquals(false, $calc->plus(1, ''));
-        $this->assertEquals(false, $calc->plus('', ''));
+        $this->assertEquals(2, $this->calc->plus(1, 1));
+        $this->assertEquals(false, $this->calc->plus('', 1));
+        $this->assertEquals(false, $this->calc->plus(1, ''));
+        $this->assertEquals(false, $this->calc->plus('', ''));
     }
-    
+
+    public function testMinus() {
+
+        $this->assertEquals(1, $this->calc->minus(2, 1));
+    }    
 }
