@@ -1,6 +1,6 @@
 <?php
 require_once(dirname(dirname(__FILE__)) . "/vendor/autoload.php");
-require_once(dirname(dirname(__FILE__)) . "/Calc.php");
+require_once(dirname(dirname(__FILE__)) . "/calc.php");
 
 class CalcTest extends PHPUnit_Framework_TestCase
 {
