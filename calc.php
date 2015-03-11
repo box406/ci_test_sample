@@ -9,6 +9,9 @@ class Calc {
     return $a + $b;
   }
   public function minus($a, $b) {
+    if (empty($a) || empty($b)) {
+      return false;
+    }   
     return $a - $b;
   }
 }

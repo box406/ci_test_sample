@@ -23,5 +23,8 @@ class CalcTest extends PHPUnit_Framework_TestCase
     public function testMinus() {
 
         $this->assertEquals(1, $this->calc->minus(2, 1));
+        $this->assertEquals(false, $this->calc->minus('', 1));
+        $this->assertEquals(false, $this->calc->minus(1, ''));
+        $this->assertEquals(false, $this->calc->minus('', ''));
     }    
 }
